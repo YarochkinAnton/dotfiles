@@ -1,0 +1,9 @@
+[Unit]
+Description=Obsidian vault backup service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /home/poplav/bin/backup.sh obsidian /home/poplav/documents/mind-vault
+
+[Install]
+WantedBy=multi-user.target
