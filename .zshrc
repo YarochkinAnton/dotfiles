@@ -115,3 +115,5 @@ alias sctlu="systemctl --user"
 
 alias jctl="journalctl"
 alias jctlu="journalctl --user"
+
+alias dotfiles="vim ~/dotfiles"
