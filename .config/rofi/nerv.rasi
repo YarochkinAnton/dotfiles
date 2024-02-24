@@ -1,0 +1,119 @@
+/*@define-color jet-black #0e0e10;
+@define-color white #fdf6e4;
+@define-color red #ac0607;
+@define-color orange #e86106;
+@define-color green #00b88d;*/
+* {
+    bg-col: #0e0e10;
+    border-col: #e86106; fg-col: #fdf6e4;
+    green: #00b88d;
+    blue: #57a0d7;
+    red: #ac0607;
+    anchor: north;
+    location: center;
+}
+
+window {
+    width: 600;
+    /*background: #000e0e10;*/
+    background: transparent;
+    transparency: "real";
+    border: 3px;
+    border-radius: 6px;
+    border-color: @border-col;
+    children: [ mainbox ];
+    y-offset: -15%;
+}
+
+mainbox {
+    padding: 1em;
+    background-color: @bg-col;
+    children: [ inputbar, listview, mode-switcher ];
+}
+
+inputbar {
+    background-color: inherit;
+    width: 100%;
+    children: [ prompt, textbox-prompt-colon, entry, case-indicator ];
+}
+
+case-indicator {
+    background-color: inherit;
+}
+
+entry {
+    background-color: @bg-col;
+    text-color: @fg-col;
+    placeholder: "Type here";
+    border-radius: 0;
+    border: 3px;
+}
+
+prompt {
+    background-color: @bg-col;
+    text-color: @blue;
+}
+
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+    background-color: @bg-col;
+    text-color: @fg-col;
+}
+
+listview {
+    background-color: @bg-col;
+    scrollbar: true;
+    dynamic: true;
+    lines: 7;
+}
+
+scrollbar {
+    handle-color: @blue;
+    background-color: @bg-col;
+    width: 1em;
+}
+
+element {
+    text-color: @fg-col;
+    spacing: 0px;
+    margin: 0 1em;
+    sorder-color: @green;
+    children: [ element-text, element-icon ];
+}
+
+element selected {
+    text-color: @border-col;
+    border-color: @green;
+    border: 0 0 2px 0;
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: @bg-col;
+    text-color:       inherit;
+}
+
+button {
+    background-color: @bg-col;
+    text-color: @fg-col;
+}
+
+button selected {
+    text-color: @green;
+}
+
+message {
+    background-color: @bg-col;
+}
+
+textbox {
+    text-color: @blue;
+    background-color: @bg-col;
+}
+
+error-message {
+    padding: 0;
+    background-color: @bg-color;
+    text-color: @red;
+}
