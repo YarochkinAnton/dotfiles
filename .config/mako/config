@@ -1,0 +1,15 @@
+font=Iosevka 12
+background-color=#0e0e10
+text-color=#ffffff
+height=110
+width=300
+border-size=1
+border-color=#e86106
+border-radius=6
+icons=1
+sort=-time
+layer=overlay
+max-icon-size=32
+default-timeout=0
+ignore-timeout=1
+output=HDMI-A-1
