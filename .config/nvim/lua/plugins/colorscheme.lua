@@ -1,9 +1,13 @@
 return {
-    { "marko-cerovac/material.nvim" },
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "material",
-        },
-    }
+	{ "marko-cerovac/material.nvim" },
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+	},
+	{
+		"LazyVim/LazyVim",
+		opts = {
+			colorscheme = "catppuccin-mocha",
+		},
+	},
 }
