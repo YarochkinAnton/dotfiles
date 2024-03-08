@@ -5,3 +5,6 @@ vim.keymap.set("i", "шш", "<Esc>")
 -- Tab switching
 vim.keymap.set("", "<Tab>", "gt")
 vim.keymap.set("", "<S-Tab>", "gT")
+
+-- Enter colon with double-tap semicolon
+vim.keymap.set("n", ";;", ":", { desc = "which_key_ignore" })
