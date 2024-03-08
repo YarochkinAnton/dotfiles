@@ -132,7 +132,7 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "alacritty -e pulsemixer"
     },
     "bluetooth": {
         "format": " {status}",
