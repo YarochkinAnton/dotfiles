@@ -1,5 +1,6 @@
 return {
 	{ "marko-cerovac/material.nvim" },
+	{ "rose-pine/neovim", name = "rose-pine" },
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
@@ -7,7 +8,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "catppuccin-mocha",
+			colorscheme = "rose-pine",
 		},
 	},
 }
