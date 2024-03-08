@@ -70,7 +70,7 @@ ZSH_THEME="eva"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow history rust kubectl)
+plugins=(git git-flow history rust kubectl kube-ps1)
 
 fpath+=~/.zfunc
 source $ZSH/oh-my-zsh.sh
