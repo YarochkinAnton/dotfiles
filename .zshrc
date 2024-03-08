@@ -116,4 +116,4 @@ alias sctlu="systemctl --user"
 alias jctl="journalctl"
 alias jctlu="journalctl --user"
 
-alias dotfiles="cd ~/dotfiles"
+alias dotfiles="cd $DOTFILES"
