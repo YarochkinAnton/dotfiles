@@ -1,7 +1,7 @@
 @theme "nerv"
 
 configuration {
-    modes: "window,drun,run,ssh";
+    modes: "drun,run";
     font: "Iosevka Term SS01 14";
 /*	location: 0;*/
 /*	yoffset: 0;*/
