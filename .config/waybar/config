@@ -145,5 +145,9 @@
     "hyprland/language": {
         "format-en": "EN",
         "format-ru": "RU"
+    },
+    "hyprland/submap": {
+        "format": "> {}",
+        "max-length": 10
     }
 }
