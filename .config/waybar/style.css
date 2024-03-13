@@ -5,9 +5,9 @@
 @define-color green #00b88d;
 
 * {
-  font-family: "FiraCode Nerd Font";
+  font-family: "Iosevka Term SS01";
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   color: @white;
 }
 
