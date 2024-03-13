@@ -117,3 +117,5 @@ alias jctl="journalctl"
 alias jctlu="journalctl --user"
 
 alias dotfiles="cd $DOTFILES"
+
+eval "$(fzf --zsh)"
