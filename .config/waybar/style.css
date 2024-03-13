@@ -207,21 +207,6 @@ label:focus {
   min-width: 100px;
 }
 
-#custom-vpn {
-  border-radius: 6px;
-  margin: 6px 0;
-  padding: 0 6px;
-}
-
-#custom-vpn.off {
-  background-color: @red;
-  color: transparent;
-}
-
-#custom-vpn.up {
-  background-color: @green;
-}
-
 #temperature {
   background-color: inherit;
   color: inherit;
