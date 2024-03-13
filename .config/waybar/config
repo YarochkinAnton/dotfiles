@@ -85,12 +85,12 @@
             "<span color='#e86106'>▇</span>", // orange
             "<span color='#ac0607'>█</span>" // red
         ],
-        "on-click": "alacritty --class htop -o 'font.size=10' --command htop --sort-key=PERCENT_CPU"
+        "on-click": "alacritty --class htop --command htop --sort-key=PERCENT_CPU"
     },
     "memory": {
         "format": "{used:0.1f}/{total:0.1f} GiB",
         "interval": 1,
-        "on-click": "alacritty --class htop -o 'font.size=10' --command htop --sort-key=PERCENT_MEM"
+        "on-click": "alacritty --class htop --command htop --sort-key=PERCENT_MEM"
     },
     "temperature": {
         // "thermal-zone": 2,
