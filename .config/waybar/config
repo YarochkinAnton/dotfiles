@@ -4,6 +4,7 @@
     "spacing": 2,
     "modules-left": [
         "tray",
+        "hyprland/window",
         "hyprland/submap"
     ],
     "modules-center": [
@@ -22,7 +23,7 @@
     ],
     // Modules configuration
     "hyprland/window": {
-        "format": "{initialTitle}",
+        "format": "{title}",
         "max-length": "20",
         "separate-outputs": true
     },
