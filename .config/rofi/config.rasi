@@ -63,8 +63,7 @@ configuration {
 /*	drun-reload-desktop-cache: false;*/
 /*	normalize-match: false;*/
 
-/*	steal-focus: false;*/
-	steal-focus: true;
+	steal-focus: false;
 
 /*	application-fallback-icon: ;*/
 /*	refilter-timeout-limit: 8192;*/

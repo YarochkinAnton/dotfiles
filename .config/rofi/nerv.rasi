@@ -5,10 +5,11 @@
 @define-color green #00b88d;*/
 * {
     bg-col: #0e0e10;
-    border-col: #e86106; fg-col: #fdf6e4;
-    green: #00b88d;
-    blue: #57a0d7;
-    red: #ac0607;
+    border-col: #ff9408;
+    fg-col: #fdf6e4;
+    green: #00a872;
+    blue: #00b3e3;
+    red: #df0015;
     anchor: north;
     location: center;
 }
@@ -16,10 +17,10 @@
 window {
     width: 600;
     /*background: #000e0e10;*/
-    background: transparent;
-    transparency: "real";
-    border: 3px;
-    border-radius: 6px;
+    // background: transparent;
+    // transparency: "real";
+    border: 2px;
+    // border-radius: 6px;
     border-color: @border-col;
     children: [ mainbox ];
     y-offset: -15%;
