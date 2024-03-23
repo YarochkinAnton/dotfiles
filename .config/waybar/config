@@ -33,9 +33,8 @@
         "on-click": "activate",
         "format-icons": {
             "1": "<span color='#e86106'></span>",
-            "code": "<span color='#0179CB'></span>",
+            "terminal": "<span color='#00A872'></span>",
             "telegram": "<span color='#24A2DF'></span>",
-            "whatsapp": "<span color='#00A884'></span>",
             "mail": "",
             "discord": "<span color='#5865F2'></span>",
             "notes": "N",
