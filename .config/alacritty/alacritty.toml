@@ -9,7 +9,7 @@ x = 4
 y = 0
 
 [font]
-size = 11
+size = 12
 
 [font.bold]
 family = "Iosevka Term SS01"
