@@ -14,14 +14,14 @@ status=""
 urgency=""
 
 if [ $result -eq 0 ]; then
-	status="success"
-	urgency="normal"
+    status="success"
+    urgency="normal"
 else
-	status="failure"
-	urgency="critical"
+    status="failure"
+    urgency="critical"
 fi
 
 notify-send -a BACKUP \
-	--urgency $urgency \
-	"Backup [$status]" \
-	"name: $name\ntime: $(date)"
+    --urgency $urgency \
+    "Backup [$status]" \
+    "name: $name\ntime: $(date)"
