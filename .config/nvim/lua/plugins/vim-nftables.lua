@@ -1,3 +1,3 @@
 return {
-	{ "nfnty/vim-nftables" },
+    { "nfnty/vim-nftables" },
 }

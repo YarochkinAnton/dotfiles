@@ -1,3 +1,3 @@
 return {
-    { 'chr4/nginx.vim' }
+    { "chr4/nginx.vim" },
 }

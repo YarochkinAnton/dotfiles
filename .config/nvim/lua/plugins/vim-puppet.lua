@@ -1,3 +1,3 @@
 return {
-	{ "rodjek/vim-puppet" },
+    { "rodjek/vim-puppet" },
 }

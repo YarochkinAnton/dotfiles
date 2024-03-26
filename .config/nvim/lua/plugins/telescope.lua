@@ -9,7 +9,7 @@ return {
                 additional_args = { "--hidden" },
             },
             live_grep = {
-                additional_args = { "--hidden" },
+                additional_args = { "--hidden", "--glob", "!**/.git/**" },
             },
         },
     },
