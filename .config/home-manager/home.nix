@@ -46,10 +46,9 @@
         pkgs.borgbackup
         pkgs.butane # For coreos configuration conversion
         pkgs.cilium-cli
-        pkgs.dust # du + rust
+        pkgs.du-dust # du + rust
         pkgs.fd
         pkgs.freerdp
-        # TODO: https://github.com/unixorn/fzf-zsh-plugin
         pkgs.fzf
         pkgs.gimp
         pkgs.go
@@ -58,7 +57,7 @@
         pkgs.ranger
         # TODO: fix glfw error
         pkgs.imhex
-        pkgs.hyprshot
+        #pkgs.hyprshot
         pkgs.jq
         pkgs.lazygit
         pkgs.mako
@@ -71,7 +70,6 @@
         pkgs.pulsemixer
         pkgs.inkscape
         pkgs.rdesktop
-        pkgs.ripgrep
         pkgs.rofi-wayland
         pkgs.rsync
         pkgs.step-cli
@@ -89,7 +87,73 @@
         (pkgs.python3.withPackages (python-pkgs: [
             python-pkgs.jinja2
         ]))
+        pkgs.iosevka-bin
+        (pkgs.iosevka-bin.override {
+            variant = "SS01";
+        })
+        pkgs.iosevka
+        pkgs.nerdfonts
+        pkgs.kubectl
+        pkgs.yarn
     ];
+
+    fonts.fontconfig.enable = true;
+
+    programs.waybar = {
+        enable = true;
+        systemd.enable = true;
+    };
+    programs.alacritty = {
+        enable = true;
+    };
+    programs.neovim = {
+        enable = true;
+        defaultEditor = true;
+        viAlias = true;
+        vimAlias = true;
+    };
+
+    programs.ripgrep = {
+        enable = true;
+    };
+
+    programs.zsh = {
+        enable = true;
+        enableCompletion = true;
+        oh-my-zsh = {
+            enable = true;
+            plugins = [
+                "git"
+                "systemd"
+                "fzf"
+                "kube-ps1"
+            ];
+            custom = "$HOME/.config/.oh-my-zsh/custom";
+            theme = "eva";
+        };
+        envExtra = ''
+            DOTFILES=$HOME/.dotfiles
+        '';
+    };
+
+    programs.zoxide = {
+        enable = true;
+    };
+
+    programs.fzf = {
+        enable = true;
+    };
+
+    home.shellAliases = {
+        cd = "z";
+        sctl = "systemctl";
+        sctlu = "systemctl --user";
+        jctl= "journalctl";
+        jctlu = "journalctl --user";
+        dotfiles = "vim $DOTFILES";
+        switch = "home-manager switch";
+    };
+
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
     # plain files is through 'home.file'.
