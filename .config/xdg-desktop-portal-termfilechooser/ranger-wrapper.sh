@@ -25,8 +25,8 @@ save="$3"
 path="$4"
 out="$5"
 
-cmd="/usr/bin/ranger"
-termcmd="${TERMCMD:-/usr/bin/alacritty}"
+cmd="ranger"
+termcmd="${TERMCMD:-alacritty}"
 
 if [ "$save" = "1" ]; then
     set -- --choosefile="$out" --cmd='"echo Select save path (see tutorial in preview pane; try pressing zv or zp if no preview)"' --selectfile="$path"
@@ -61,7 +61,7 @@ fi
 
 echo $@
 
-"$termcmd" -e $cmd "$@"
+nixGL "$termcmd" -e $cmd "$@"
 
 if [ "$save" = "1" ] && [ ! -s "$out" ]; then
     rm "$path"
