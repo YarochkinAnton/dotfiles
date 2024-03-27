@@ -96,6 +96,7 @@
         pkgs.kubectl
         pkgs.yarn
         pkgs.zoxide
+        pkgs.gcc
     ];
 
     fonts.fontconfig.enable = true;
