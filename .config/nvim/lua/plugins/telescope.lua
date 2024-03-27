@@ -21,9 +21,6 @@ return {
                     ["p"] = actions_layout.toggle_preview,
                 },
             },
-            preview = {
-                -- hide_on_startup = true,
-            },
             layout_strategy = "flex",
             layout_config = {
                 flex = {
