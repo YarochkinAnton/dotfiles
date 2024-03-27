@@ -95,6 +95,7 @@
         pkgs.nerdfonts
         pkgs.kubectl
         pkgs.yarn
+        pkgs.zoxide
     ];
 
     fonts.fontconfig.enable = true;
@@ -133,6 +134,7 @@
         };
         envExtra = ''
             DOTFILES=$HOME/.dotfiles
+            PATH=$HOME/.nix-profile/bin:$PATH
         '';
     };
 
