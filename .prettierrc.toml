@@ -1,0 +1,8 @@
+tabWidth = 4
+
+[options]
+editorconfig = true
+
+[[overrides]]
+files = "*.yaml"
+options = { tabWidth = 2 }
