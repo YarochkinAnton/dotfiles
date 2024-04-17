@@ -7,15 +7,13 @@ return {
             find_files = {
                 hidden = true,
             },
-            grep_string = {
-                additional_args = { "--hidden" },
-            },
             live_grep = {
+                glob_pattern = { "!**/.git/**" },
                 additional_args = { "--hidden" },
             },
         },
         defaults = {
-            file_ingore_patterns = ".git",
+            file_ingore_patterns = { ".git/" },
             mappings = {
                 n = {
                     ["p"] = actions_layout.toggle_preview,
