@@ -5,3 +5,25 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.g.material_style = "deep ocean"
+
+-- Next section is sourced from
+-- https://github.com/Wansmer/langmapper.nvim/blob/3d5c9e8cf0186da8e2f04480cd84042ad6d2de29/README.md
+local function escape(str)
+    -- You need to escape these characters to work correctly
+    local escape_chars = [[;,."|\]]
+    return vim.fn.escape(str, escape_chars)
+end
+
+-- Recommended to use lua template string
+local en = [[`qwertyuiop[]asdfghjkl;'zxcvbnm]]
+local ru = [[ёйцукенгшщзхъфывапролджэячсмить]]
+local en_shift = [[~QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>]]
+local ru_shift = [[ËЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ]]
+
+vim.opt.langmap = vim.fn.join({
+    -- | `to` should be first     | `from` should be second
+    escape(ru_shift)
+        .. ";"
+        .. escape(en_shift),
+    escape(ru) .. ";" .. escape(en),
+}, ",")
