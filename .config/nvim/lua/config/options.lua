@@ -27,3 +27,5 @@ vim.opt.langmap = vim.fn.join({
         .. escape(en_shift),
     escape(ru) .. ";" .. escape(en),
 }, ",")
+
+vim.opt.spelllang = "ru,en"
