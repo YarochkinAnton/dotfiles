@@ -97,6 +97,13 @@
         pkgs.yarn
         pkgs.zoxide
         pkgs.gcc
+        pkgs.krew
+        pkgs.fuse-overlayfs
+        pkgs.slirp4netns
+        pkgs.runc
+        pkgs.playerctl
+        pkgs.kicad
+        pkgs.xkb-switch
     ];
 
     fonts.fontconfig.enable = true;
@@ -136,6 +143,7 @@
         envExtra = ''
             DOTFILES=$HOME/.dotfiles
             PATH=$HOME/.nix-profile/bin:$PATH
+            PATH=$HOME/.krew/bin:$PATH
         '';
     };
 
@@ -155,6 +163,7 @@
         jctlu = "journalctl --user";
         dotfiles = "vim $DOTFILES";
         switch = "home-manager switch";
+        "так-стоп-нахуй" = "shutdown now";
     };
 
 
