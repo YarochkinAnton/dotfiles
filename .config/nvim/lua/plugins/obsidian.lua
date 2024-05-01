@@ -24,6 +24,8 @@ return {
                     p = { "<cmd>ObsidianYesterday<CR>", "Open yesterday's daily note" },
                     s = { "<cmd>ObsidianDailies<CR>", "Open dailies" },
                 },
+                l = { "<cmd>ObsidianLinks<CR>", "Show links" },
+                L = { "<cmd>ObsidianBacklinks<CR>", "Show backlinks" },
             },
         }
         local wk = require("which-key")
