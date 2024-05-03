@@ -26,7 +26,7 @@ def sinks():
 def get_active_sinks():
     for sink in sinks():
         if "RUNNING" in sink:
-            return sink[0]
+            return sink[1]
 
 
 def set_default_sink(id):
