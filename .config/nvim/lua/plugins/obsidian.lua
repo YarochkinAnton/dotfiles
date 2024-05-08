@@ -26,6 +26,7 @@ return {
                 },
                 l = { "<cmd>ObsidianLinks<CR>", "Show links" },
                 L = { "<cmd>ObsidianBacklinks<CR>", "Show backlinks" },
+                t = { "<cmd>ObsidianToggleCheckbox<CR>", "Toggle checkbox" },
             },
         }
         local wk = require("which-key")
