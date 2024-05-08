@@ -13,6 +13,10 @@
 import subprocess
 import sys
 
+class Sink:
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
 
 def sinks():
     output = subprocess.run(
@@ -23,22 +27,38 @@ def sinks():
     return sinks
 
 
-def get_active_sinks():
+def get_active_sink():
     for sink in sinks():
         if "RUNNING" in sink:
-            return sink[1]
+            return Sink(sink[0], sink[1])
+
+def find_sink(name):
+    for sink in sinks():
+        if name in sink[1]:
+            return Sink(sink[0], sink[0])
 
 
 def set_default_sink(id):
     subprocess.call(["pactl", "set-default-sink", id])
 
 
-sink_a = sys.argv[1]
-sink_b = sys.argv[2]
+sink_a_name = sys.argv[1]
+sink_b_name = sys.argv[2]
 
-active_sink = get_active_sinks()
+active_sink = get_active_sink()
 
-if active_sink == sink_a:
-    set_default_sink(sink_b)
-elif active_sink == sink_b:
-    set_default_sink(sink_a)
+if active_sink == None:
+    exit(1)
+
+if sink_a_name in active_sink.name:
+    sink_b = find_sink(sink_b_name)
+    if sink_b == None:
+        exit(1)
+    set_default_sink(sink_b.id)
+elif sink_b_name in active_sink.name:
+    sink_a = find_sink(sink_a_name)
+    if sink_a == None:
+        exit(1)
+    set_default_sink(sink_a.id)
+else:
+    exit(1)
