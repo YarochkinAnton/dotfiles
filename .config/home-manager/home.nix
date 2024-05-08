@@ -86,13 +86,13 @@
         pkgs.dosfstools
         (pkgs.python3.withPackages (python-pkgs: [
             python-pkgs.jinja2
+            python-pkgs.regex
         ]))
         pkgs.iosevka-bin
         (pkgs.iosevka-bin.override {
             variant = "SS01";
         })
         pkgs.iosevka
-        pkgs.nerdfonts
         pkgs.kubectl
         pkgs.yarn
         pkgs.zoxide
@@ -102,8 +102,8 @@
         pkgs.slirp4netns
         pkgs.runc
         pkgs.playerctl
-        pkgs.kicad
         pkgs.xkb-switch
+        pkgs.semgrep
     ];
 
     fonts.fontconfig.enable = true;
@@ -115,6 +115,11 @@
     programs.alacritty = {
         enable = true;
     };
+    nixpkgs.overlays = [
+        (import (builtins.fetchTarball {
+            url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+        }))
+    ];
     programs.neovim = {
         enable = true;
         defaultEditor = true;
@@ -164,6 +169,7 @@
         dotfiles = "vim $DOTFILES";
         switch = "home-manager switch";
         "так-стоп-нахуй" = "shutdown now";
+        notes = "cd $HOME/documents/mind-vault";
     };
 
 
