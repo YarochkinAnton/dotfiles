@@ -96,7 +96,6 @@
         pkgs.kubectl
         pkgs.yarn
         pkgs.zoxide
-        pkgs.gcc
         pkgs.krew
         pkgs.fuse-overlayfs
         pkgs.slirp4netns
