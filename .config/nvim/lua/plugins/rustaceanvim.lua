@@ -56,6 +56,63 @@ return {
                             enable = true,
                         },
                     },
+                    completion = {
+                        snippets = {
+                            custom = {
+                                mutex = {
+                                    postfix = "mtx",
+                                    body = "Mutex::new(${receiver})",
+                                    description = "Wrap expression in Mutex::new",
+                                    scope = "expr",
+                                },
+                                arc = {
+                                    postfix = "arc",
+                                    body = "Arc::new(${receiver})",
+                                    requires = "std::sync::Arc",
+                                    description = "Put the expression into an `Arc`",
+                                    scope = "expr",
+                                },
+                                box = {
+                                    postfix = "box",
+                                    body = "box::new(${receiver})",
+                                    description = "Put the expression into an `Arc`",
+                                    scope = "expr",
+                                },
+                                rc = {
+                                    postfix = "rc",
+                                    body = "Rc::new(${receiver})",
+                                    requires = "std::rc::Rc",
+                                    description = "Put the expression into an `Rc`",
+                                    scope = "expr",
+                                },
+                                box = {
+                                    postfix = "pinbox",
+                                    body = "Box::pin(${receiver})",
+                                    requires = "std::boxed::Box",
+                                    description = "Put the expression into a pinned `Box`",
+                                    scope = "expr",
+                                },
+                                Ok = {
+                                    postfix = "ok",
+                                    body = "Ok(${receiver})",
+                                    description = "Wrap the expression in a `Result::Ok`",
+                                    scope = "expr",
+                                },
+                                Err = {
+                                    postfix = "err",
+                                    body = "Err(${receiver})",
+                                    description = "Wrap the expression in a `Result::Err`",
+                                    scope = "expr",
+                                },
+                                Some = {
+                                    postfix = "some",
+                                    body = "Some(${receiver})",
+                                    description = "Wrap the expression in an `Option::Some`",
+                                    scope = "expr",
+                                },
+                            },
+                        },
+                    },
                 },
             },
         },
