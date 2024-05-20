@@ -1,5 +1,6 @@
 vim.opt.confirm = false
 vim.opt.guicursor = "i:ver25"
+vim.opt.guifont = "Iosevka Term SS01"
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
