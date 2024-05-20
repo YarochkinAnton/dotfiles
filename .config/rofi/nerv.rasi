@@ -115,6 +115,6 @@ textbox {
 
 error-message {
     padding: 0;
-    background-color: @bg-color;
+    background-color: @bg-col;
     text-color: @red;
 }
