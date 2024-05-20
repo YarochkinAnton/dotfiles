@@ -1,11 +1,11 @@
-font=Iosevka 12
-background-color=#0e0e10
+font=Iosevka Term SS01 12
+background-color=#2e3440
 text-color=#ffffff
 height=110
 width=300
-border-size=1
-border-color=#e86106
-border-radius=6
+border-size=3
+border-color=#88c0d0
+border-radius=2
 icons=1
 sort=-time
 layer=overlay

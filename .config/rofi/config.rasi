@@ -1,4 +1,4 @@
-@theme "nerv"
+@theme "nord"
 
 configuration {
     modes: "drun,run";

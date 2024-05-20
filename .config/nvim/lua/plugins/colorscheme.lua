@@ -6,6 +6,7 @@ return {
         name = "catppuccin",
     },
     { "shaunsingh/nord.nvim" },
+    { "neanias/everforest-nvim" },
     {
         "LazyVim/LazyVim",
         opts = {

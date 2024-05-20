@@ -4,16 +4,42 @@
 @define-color orange #ff9408;
 @define-color green #00a872;
 
+/* Nord theme */
+/* Polar Night */
+@define-color nord0 #2e3440;
+@define-color nord1 #3b4252;
+@define-color nord2 #434c5e;
+@define-color nord3 #4c566a;
+
+/* Snow Storm */
+@define-color nord4 #d8dee9;
+@define-color nord5 #e5e9f0;
+@define-color nord6 #eceff4;
+
+/* Frost */
+@define-color nord7 #8fbcbb;
+@define-color nord8 #88c0d0;
+@define-color nord9 #81a1c1;
+@define-color nord10 #5e81ac;
+
+/* Aurora */
+@define-color nord11 #bf616a; /* red */
+@define-color nord12 #d08770; /* orange */
+@define-color nord13 #ebcb8b; /* yellow */
+@define-color nord14 #a3be8c; /* green */
+@define-color nord15 #b48ead; /* purple */
+
+
+
 * {
     font-family: "Iosevka Term SS01";
     font-weight: bold;
     font-size: 14px;
-    color: @white;
+    color: @nord6;
 }
 
 window#waybar {
-    background-color: @jet-black;
-    color: @white;
+    background-color: @nord1;
     transition-property: background-color;
     transition-duration: 0.5s;
 }
@@ -22,9 +48,9 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-window#waybar.termite {
-    background-color: #3f3f3f;
-}
+/* window#waybar.termite { */
+/*     background-color: #3f3f3f; */
+/* } */
 
 window#waybar.chromium {
     background-color: #000000;
@@ -42,7 +68,6 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
 }
 
 #workspaces button {
@@ -61,22 +86,18 @@ button:hover {
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    /* background: rgba(0, 0, 0, 0.2); */
+    box-shadow: inset 0 -2px @nord7;
 }
 
 #workspaces button.active {
     background-color: transparent;
-    color: @orange;
-    box-shadow: inset 0 -2px @orange;
+    /* color: @nord8; */
+    box-shadow: inset 0 -2px @nord8;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-#mode {
-    background-color: #64727d;
-    border-bottom: 3px solid #ffffff;
+    background-color: @nord11;
 }
 
 #clock,
@@ -95,7 +116,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 10px;
+    padding: 0 4px;
     color: #ffffff;
 }
 
@@ -116,7 +137,6 @@ button:hover {
 }
 
 #clock {
-    background-color: @jet-black;
     color: inherit;
 }
 
@@ -153,7 +173,6 @@ label:focus {
 }
 
 #cpu {
-    background-color: @jet-black;
     color: inherit;
 }
 
@@ -163,7 +182,6 @@ label:focus {
 }
 
 #disk {
-    background-color: inherit;
     color: inherit;
 }
 
@@ -173,13 +191,13 @@ label:focus {
 
 #network {
     margin: 6px 0;
-    background-color: @green;
-    color: @jet-black;
+    background-color: @nord14;
+    color: @nord0;
     border-radius: 6px;
 }
 
 #network.disconnected {
-    background-color: @red;
+    background-color: @nord11;
 }
 
 #pulseaudio {
@@ -188,37 +206,33 @@ label:focus {
 }
 
 #pulseaudio.muted {
-    background-color: @red;
-    color: #2a5c45;
+    background-color: @nord11;
+    color: @nord4;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
+    color: inherit;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    background-color: @nord11;
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
     min-width: 100px;
 }
 
 #temperature {
-    background-color: inherit;
     color: inherit;
 }
 
 #temperature.critical {
-    background-color: @orange;
+    background-color: @nord12;
     color: inherit;
 }
 
 #tray {
-    background-color: #57a0d7;
+    background-color: @nord3;
     border-radius: 6px;
     margin: 2px;
 }
@@ -229,7 +243,7 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: @nord3;
 }
 
 #idle_inhibitor {
@@ -259,16 +273,12 @@ label:focus {
 }
 
 #language {
-    background: inherit;
-    color: inherit;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
 }
 
 #keyboard-state {
-    background: inherit;
-    color: inherit;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
@@ -279,7 +289,7 @@ label:focus {
 }
 
 #keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
+    /* background: rgba(0, 0, 0, 0.2); */
 }
 
 #scratchpad {
@@ -291,5 +301,5 @@ label:focus {
 }
 
 #submap {
-    color: @red;
+    color: @nord11;
 }

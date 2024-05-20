@@ -1,29 +1,6 @@
-[colors.primary]
-background = "#2e3440"
-foreground = "#c0c5ce"
+# import = ["~/.config/alacritty/everforest.toml"]
+import = ["~/.config/alacritty/nord.toml"]
 
-[colors.normal]
-black = "#2b303b"
-red = "#bf616a"
-green = "#a3be8c"
-yellow = "#ebcb8b"
-blue = "#8fa1b3"
-magenta = "#b48ead"
-cyan = "#96b5b4"
-white = "#c0c5ce"
-
-[colors.bright]
-black = "#65737e"
-red = "#bf616a"
-green = "#a3be8c"
-yellow = "#ebcb8b"
-blue = "#8fa1b3"
-magenta = "#b48ead"
-cyan = "#96b5b4"
-white = "#eff1f5"
-
-# Normal colors
-# Bright colors
 [env]
 TERM = "xterm-256color"
 
@@ -42,7 +19,7 @@ family = "Iosevka Term SS01"
 style = "Medium"
 
 [font.normal]
-family = "Iosevka"
+family = "Iosevka Term SS01"
 style = "Regular"
 
 [font.italic]

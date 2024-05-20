@@ -1,7 +1,9 @@
 {
     "layer": "top",
     "position": "bottom", // Waybar position (top|bottom|left|right)
-    "output": ["HDMI-A-1"],
+    "output": [
+        "HDMI-A-1"
+    ],
     "spacing": 2,
     "modules-left": [
         "tray",
@@ -17,6 +19,7 @@
         "custom/vpn",
         "network",
         "cpu",
+        "temperature",
         "memory",
         "keyboard-state",
         "hyprland/language",
@@ -77,14 +80,14 @@
         "interval": 1,
         "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
         "format-icons": [
-            "<span color='#00b88d'>▁</span>", // green
-            "<span color='#57a0d7'>▂</span>", // blue
-            "<span color='#f8f8f2'>▃</span>", // white
-            "<span color='#f8f8f2'>▄</span>", // white
-            "<span color='#ffffa5'>▅</span>", // yellow
-            "<span color='#e86106'>▆</span>", // yellow
-            "<span color='#e86106'>▇</span>", // orange
-            "<span color='#ac0607'>█</span>" // red
+            "<span color='#a3be8c'>▁</span>", // nord14
+            "<span color='#a3be8c'>▂</span>", // nord14
+            "<span color='#ebcb8b'>▃</span>", // nord13
+            "<span color='#ebcb8b'>▄</span>", // nord13
+            "<span color='#d08770'>▅</span>", // nord12
+            "<span color='#d08770'>▆</span>", // nord12
+            "<span color='#bf616a'>▇</span>", // nord11
+            "<span color='#bf616a'>█</span>" // nord11
         ],
         "on-click": "alacritty --class htop --command htop --sort-key=PERCENT_CPU"
     },
@@ -94,8 +97,8 @@
         "on-click": "alacritty --class htop --command htop --sort-key=PERCENT_MEM"
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "interval": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C",
@@ -111,7 +114,7 @@
     },
     "pulseaudio": {
         "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",

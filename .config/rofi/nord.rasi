@@ -1,0 +1,115 @@
+* {
+    bg-col: #2e3440;
+    border-col: #88c0d0;
+    selection-col: #81a1c1;
+    fg-col: #d8dee9;
+    green: #a3be8c;
+    blue: #5e81ac;
+    red: #bf616a;
+    anchor: north;
+    location: center;
+    background: transparent;
+}
+
+window {
+    width: 500;
+    background-color: @bg-col;
+    border: 2px;
+    border-radius: 6px;
+    border-color: @border-col;
+    children: [ mainbox ];
+    y-offset: -15%;
+}
+
+mainbox {
+    padding: 1em;
+    background-color: inherit;
+    children: [ inputbar, listview, mode-switcher ];
+}
+
+inputbar {
+    background-color: inherit;
+    width: 100%;
+    children: [ prompt, textbox-prompt-colon, entry, case-indicator ];
+}
+
+case-indicator {
+    background-color: inherit;
+}
+
+entry {
+    background-color: @bg-col;
+    text-color: @fg-col;
+    placeholder: "Type here";
+    border-radius: 0;
+    border: 3px;
+}
+
+prompt {
+    background-color: @bg-col;
+    text-color: #8fbcbb;
+}
+
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+    background-color: @bg-col;
+    text-color: @fg-col;
+}
+
+listview {
+    background-color: @bg-col;
+    scrollbar: false;
+    dynamic: true;
+    lines: 7;
+}
+
+scrollbar {
+    handle-color: @blue;
+    background-color: @bg-col;
+    width: 1em;
+}
+
+element {
+    text-color: @fg-col;
+    spacing: 0px;
+    margin: 0 1em;
+    sorder-color: @green;
+    children: [ element-text ];
+}
+
+element selected {
+    text-color: @selection-col;
+    border-color: #88c0d0;
+    border: 0 0 2px 0;
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: @bg-col;
+    text-color:       inherit;
+}
+
+button {
+    background-color: @bg-col;
+    text-color: @fg-col;
+}
+
+button selected {
+    text-color: #b48ead;
+}
+
+message {
+    background-color: @bg-col;
+}
+
+textbox {
+    text-color: @blue;
+    background-color: @bg-col;
+}
+
+error-message {
+    padding: 0;
+    background-color: @bg-col;
+    text-color: @red;
+}
