@@ -5,10 +5,11 @@ return {
         "catppuccin/nvim",
         name = "catppuccin",
     },
+    { "shaunsingh/nord.nvim" },
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "rose-pine",
+            colorscheme = "nord",
         },
     },
 }

@@ -88,9 +88,8 @@
             python-pkgs.jinja2
             python-pkgs.regex
         ]))
-        pkgs.iosevka-bin
         (pkgs.iosevka-bin.override {
-            variant = "SS01";
+            variant = "SGr-IosevkaTermSS01";
         })
         pkgs.iosevka
         pkgs.kubectl
@@ -139,7 +138,7 @@
                 "kube-ps1"
             ];
             custom = "$HOME/.config/.oh-my-zsh/custom";
-            theme = "eva";
+            theme = "nord";
         };
         envExtra = ''
             DOTFILES=$HOME/.dotfiles
