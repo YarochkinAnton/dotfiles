@@ -1,0 +1,10 @@
+[Unit]
+Description=mako restarter
+After=mako.service
+
+[Service]
+Type=oneshot
+ExecStart=%h/bin/restart-notify.sh mako
+
+[Install]
+WantedBy=graphical-session.target

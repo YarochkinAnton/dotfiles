@@ -13,3 +13,10 @@ max-icon-size=32
 default-timeout=0
 ignore-timeout=1
 output=HDMI-A-1
+on-button-middle=exec makoctl menu -n "$id" dmenu -p 'Select action: '
+
+[urgency=low]
+border-color=#d8dee9
+
+[urgency=critical]
+border-color=#bf616a

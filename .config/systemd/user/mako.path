@@ -1,0 +1,6 @@
+[Path]
+PathModified=%h/.config/mako/config
+Unit=mako-restarter.service
+
+[Install]
+WantedBy=graphical-session.target
