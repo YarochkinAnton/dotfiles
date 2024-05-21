@@ -1,0 +1,7 @@
+[Path]
+PathModified=%h/.config/waybar/config
+PathModified=%h/.config/waybar/style.css
+Unit=waybar-restarter.service
+
+[Install]
+WantedBy=graphical-session.target

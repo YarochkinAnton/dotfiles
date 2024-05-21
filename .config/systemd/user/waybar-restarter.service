@@ -1,0 +1,10 @@
+[Unit]
+Description=waybar restarter
+After=waybar.service
+
+[Service]
+Type=oneshot
+ExecStart=%h/bin/restart-notify.sh waybar
+
+[Install]
+WantedBy=graphical-session.target
