@@ -57,11 +57,11 @@
         pkgs.ranger
         # TODO: fix glfw error
         pkgs.imhex
-        #pkgs.hyprshot
+        pkgs.hyprshot
         pkgs.jq
         pkgs.lazygit
         pkgs.mako
-        pkgs.musescore
+        # pkgs.musescore
         pkgs.nodejs
         # TODO: Apply this non-NixOS fix
         # https://github.com/ch1bo/dotfiles/blob/c17d07e783f71988b9be27185f94b75667c8b9f6/hosts/matterhorn/default.nix#L10
@@ -79,7 +79,6 @@
         pkgs.ueberzugpp
         pkgs.unzip
         pkgs.zip
-        pkgs.k9s
         pkgs.transmission
         pkgs.udisks
         pkgs.e2fsprogs
@@ -89,7 +88,7 @@
             python-pkgs.regex
         ]))
         (pkgs.iosevka-bin.override {
-            variant = "SGr-IosevkaTermSS01";
+            variant = "SGr-IosevkaTerm";
         })
         pkgs.iosevka
         pkgs.kubectl
@@ -102,6 +101,8 @@
         pkgs.playerctl
         pkgs.xkb-switch
         pkgs.semgrep
+        pkgs.terminus_font
+        pkgs.maven
     ];
 
     fonts.fontconfig.enable = true;
@@ -110,11 +111,12 @@
         enable = true;
         systemd.enable = true;
     };
-    nixpkgs.overlays = [
-        (import (builtins.fetchTarball {
-            url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-        }))
-    ];
+    #
+    # nixpkgs.overlays = [
+    #     (import (builtins.fetchTarball {
+    #         url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+    #     }))
+    # ];
     programs.neovim = {
         enable = true;
         defaultEditor = true;
@@ -123,6 +125,10 @@
     };
 
     programs.ripgrep = {
+        enable = true;
+    };
+
+    programs.k9s = {
         enable = true;
     };
 
@@ -144,6 +150,9 @@
             DOTFILES=$HOME/.dotfiles
             PATH=$HOME/.nix-profile/bin:$PATH
             PATH=$HOME/.krew/bin:$PATH
+        '';
+        initExtra = ''
+            umask 077
         '';
     };
 

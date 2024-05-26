@@ -15,16 +15,20 @@ y = 0
 size = 14
 
 [font.bold]
-family = "Iosevka Term SS01"
+family = "Iosevka Term"
 style = "Medium"
 
 [font.normal]
-family = "Iosevka Term SS01"
+family = "Iosevka Term"
 style = "Regular"
 
 [font.italic]
-family = "Iosevka Term SS01"
-style = "Italic"
+family = "Iosevka Term"
+style = "Oblique"
+
+[font.bold_italic]
+family = "Iosevka Term"
+style = "SemiBold Oblique"
 
 [[keyboard.bindings]]
 chars = "\u001B[27;5;9~"
