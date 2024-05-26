@@ -1,7 +1,6 @@
 return {
     { "marko-cerovac/material.nvim" },
-    { "rose-pine/neovim", name = "rose-pine" },
-    { "shaunsingh/nord.nvim" },
+    { "arcticicestudio/nord-vim", name = "nord" },
     { "neanias/everforest-nvim" },
     {
         "LazyVim/LazyVim",

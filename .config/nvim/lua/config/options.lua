@@ -1,6 +1,6 @@
 vim.opt.confirm = false
 vim.opt.guicursor = "i:ver25"
-vim.opt.guifont = "Iosevka Term SS01"
+vim.opt.guifont = "Iosevka Term"
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
@@ -30,3 +30,9 @@ vim.opt.langmap = vim.fn.join({
 }, ",")
 
 vim.opt.spelllang = "ru,en"
+
+vim.g.nord_bold = 1
+vim.g.nord_italic_comments = 1
+vim.g.nord_italic = 1
+vim.g.nord_underline = 1
+vim.g.nord_cursor_line_number_background = 1

@@ -119,5 +119,6 @@ return {
     },
     config = function(_, opts)
         vim.g.rustaceanvim = vim.tbl_deep_extend("force", {}, opts or {})
+        vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#4c566a" })
     end,
 }
