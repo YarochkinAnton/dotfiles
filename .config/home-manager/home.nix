@@ -103,6 +103,7 @@
         pkgs.semgrep
         pkgs.terminus_font
         pkgs.maven
+        pkgs.urlencode
     ];
 
     fonts.fontconfig.enable = true;
