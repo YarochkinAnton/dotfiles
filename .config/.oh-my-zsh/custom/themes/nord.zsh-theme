@@ -1,5 +1,5 @@
 local return_code="%(?..%F{red}%? ↵%f)"
-local user_host=$'%B%(!.%F{red}.%F{green})%n@%m%f '
+local user_host=$'%B%(!.%F{red}.%F{yellow})%n@%m%f '
 local user_symbol='%(!.#.$)'
 local current_dir="%B%F{blue}%~ %f"
 
