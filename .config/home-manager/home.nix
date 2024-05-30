@@ -104,6 +104,8 @@
         pkgs.terminus_font
         pkgs.maven
         pkgs.urlencode
+        pkgs.gitleaks
+        pkgs.pre-commit
     ];
 
     fonts.fontconfig.enable = true;
