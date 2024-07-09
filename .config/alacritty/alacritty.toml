@@ -12,7 +12,7 @@ x = 4
 y = 0
 
 [font]
-size = 16
+size = 15
 
 [font.bold]
 family = "Iosevka Term"
