@@ -139,6 +139,7 @@
                 "git"
                 "systemd"
                 "fzf"
+                "kubectl"
                 "kube-ps1"
             ];
             custom = "$HOME/.config/.oh-my-zsh/custom";
