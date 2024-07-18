@@ -16,21 +16,18 @@ return {
     },
     keys = function()
         local keys = {
-            o = {
-                name = "obsidian",
-                d = {
-                    name = "daily",
-                    t = { "<cmd>ObsidianToday<CR>", "Open today's daily note" },
-                    p = { "<cmd>ObsidianYesterday<CR>", "Open yesterday's daily note" },
-                    s = { "<cmd>ObsidianDailies<CR>", "Open dailies" },
-                },
-                l = { "<cmd>ObsidianLinks<CR>", "Show links" },
-                L = { "<cmd>ObsidianBacklinks<CR>", "Show backlinks" },
-                t = { "<cmd>ObsidianToggleCheckbox<CR>", "Toggle checkbox" },
-            },
+            { "<leader>o", group = "obsidian" },
+            { "<leader>oL", "<cmd>ObsidianBacklinks<CR>", desc = "Show backlinks" },
+            { "<leader>od", group = "daily" },
+            { "<leader>odp", "<cmd>ObsidianYesterday<CR>", desc = "Open yesterday's daily note" },
+            { "<leader>ods", "<cmd>ObsidianDailies<CR>", desc = "Open dailies" },
+            { "<leader>odt", "<cmd>ObsidianToday<CR>", desc = "Open today's daily note" },
+            { "<leader>ol", "<cmd>ObsidianLinks<CR>", desc = "Show links" },
+            { "<leader>ot", "<cmd>ObsidianToggleCheckbox<CR>", desc = "Toggle checkbox" },
         }
+
         local wk = require("which-key")
-        wk.register(keys, { prefix = "<leader>" })
+        wk.add(keys)
     end,
     opts = {
         workspaces = {
