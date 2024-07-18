@@ -106,6 +106,7 @@
         pkgs.urlencode
         pkgs.gitleaks
         pkgs.pre-commit
+        pkgs.popeye
     ];
 
     fonts.fontconfig.enable = true;
