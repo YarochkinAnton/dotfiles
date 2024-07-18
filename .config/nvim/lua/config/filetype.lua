@@ -4,5 +4,6 @@ vim.filetype.add({
         [".*/waybar/config"] = "jsonc",
         [".*/mako/config"] = "dosini",
         [".*/hypr/.*%.conf"] = "hyprlang",
+        [".*.gitlab-ci.yml"] = "yaml.gitlab",
     },
 })
