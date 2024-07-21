@@ -107,6 +107,7 @@
         pkgs.gitleaks
         pkgs.pre-commit
         pkgs.popeye
+        pkgs.sd
     ];
 
     fonts.fontconfig.enable = true;
