@@ -108,6 +108,7 @@
         pkgs.pre-commit
         pkgs.popeye
         pkgs.sd
+        pkgs.hubble
     ];
 
     fonts.fontconfig.enable = true;
