@@ -109,6 +109,14 @@
         pkgs.popeye
         pkgs.sd
         pkgs.hubble
+        pkgs.tcpdump
+        pkgs.tmux
+        pkgs.kubectx
+        pkgs.argocd
+        pkgs.bandwhich
+        pkgs.fluxcd
+        pkgs.nmap
+        pkgs.zap
     ];
 
     fonts.fontconfig.enable = true;
