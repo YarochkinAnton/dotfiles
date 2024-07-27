@@ -117,6 +117,7 @@
         pkgs.fluxcd
         pkgs.nmap
         pkgs.zap
+        pkgs.wl-clip-persist
     ];
 
     fonts.fontconfig.enable = true;

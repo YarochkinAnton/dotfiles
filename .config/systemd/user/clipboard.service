@@ -1,0 +1,22 @@
+[Unit]
+Description=Clipboard persistence service
+After=graphical-session.target
+BindsTo=graphical-session.target
+PartOf=graphical-session.target
+Requisite=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+
+[Service]
+ExecStart=%h/.nix-profile/bin/wl-clip-persist --clipboard both
+NoNewPrivileges=true
+PrivateTmp=true
+DevicePolicy=strict
+MemoryDenyWriteExecute=true
+ProtectHome=read-only
+ProtectKernelModules=true
+ProtectSystem=full
+PrivateNetwork=true
+
+[Install]
+WantedBy=graphical-session.target
