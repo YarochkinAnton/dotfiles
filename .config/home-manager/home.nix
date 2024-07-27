@@ -118,6 +118,7 @@
         pkgs.nmap
         pkgs.zap
         pkgs.wl-clip-persist
+        pkgs.moreutils
     ];
 
     fonts.fontconfig.enable = true;
