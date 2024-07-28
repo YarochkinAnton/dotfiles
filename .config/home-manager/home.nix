@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
     imports = [
@@ -119,6 +119,11 @@
         pkgs.zap
         pkgs.wl-clip-persist
         pkgs.moreutils
+        pkgs.terraform
+    ];
+
+    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+        "terraform"
     ];
 
     fonts.fontconfig.enable = true;
