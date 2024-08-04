@@ -103,6 +103,7 @@
         pkgs.wl-clip-persist
         pkgs.moreutils
         pkgs.terraform
+        pkgs.grepcidr
     ];
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
