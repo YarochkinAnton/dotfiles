@@ -58,5 +58,6 @@ return {
     },
     keys = {
         { "<leader>e", "<cmd>Telescope file_browser path=. hidden=true<CR>" },
+        { "<leader>E", "<cmd>Telescope file_browser path=%:p:h hidden=true<CR>" },
     },
 }
