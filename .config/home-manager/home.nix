@@ -104,6 +104,7 @@
         pkgs.moreutils
         pkgs.terraform
         pkgs.grepcidr
+        pkgs.drawio
     ];
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
