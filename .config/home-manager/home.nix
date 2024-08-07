@@ -69,6 +69,7 @@
             python-pkgs.jinja2
             python-pkgs.regex
             python-pkgs.requests
+            python-pkgs.bcrypt
         ]))
         (pkgs.iosevka-bin.override {
             variant = "SGr-IosevkaTerm";
