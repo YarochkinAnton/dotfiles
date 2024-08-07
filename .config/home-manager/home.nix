@@ -109,6 +109,7 @@
         pkgs.postgresql
         pkgs.cfssl
         pkgs.yazi
+        pkgs.man-pages
     ];
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
