@@ -106,6 +106,7 @@
         pkgs.terraform
         pkgs.grepcidr
         pkgs.drawio
+        pkgs.postgresql
     ];
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
