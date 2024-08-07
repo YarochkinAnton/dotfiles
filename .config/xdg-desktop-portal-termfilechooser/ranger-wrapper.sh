@@ -59,9 +59,7 @@ else
     set -- --choosefile="$out" --cmd="echo Select file (open file to select it)"
 fi
 
-echo $@
-
-nixGL "$termcmd" -e $cmd "$@"
+"$termcmd" -e $cmd "$@"
 
 if [ "$save" = "1" ] && [ ! -s "$out" ]; then
     rm "$path"
