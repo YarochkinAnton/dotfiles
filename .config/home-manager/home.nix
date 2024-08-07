@@ -107,6 +107,7 @@
         pkgs.grepcidr
         pkgs.drawio
         pkgs.postgresql
+        pkgs.cfssl
     ];
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
