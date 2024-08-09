@@ -110,6 +110,8 @@
         pkgs.cfssl
         pkgs.yazi
         pkgs.man-pages
+        pkgs.go
+        pkgs.enumer
     ];
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -157,6 +159,7 @@
             DOTFILES=$HOME/.dotfiles
             PATH=$HOME/.nix-profile/bin:$PATH
             PATH=$HOME/.krew/bin:$PATH
+            GOPATH=$HOME/documents/code/go
         '';
         initExtra = ''
             umask 077
