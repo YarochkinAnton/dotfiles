@@ -18,100 +18,138 @@
     # release notes.
     home.stateVersion = "23.11"; # Please read the comment before changing.
 
-    home.packages = [
-        pkgs.htop
-        pkgs.vlc
-        pkgs.ansible
-        pkgs.ansible-language-server
-        pkgs.ansible-lint
-        pkgs.bat
-        pkgs.borgbackup
-        pkgs.butane # For coreos configuration conversion
-        pkgs.cilium-cli
-        pkgs.du-dust # du + rust
-        pkgs.fd
-        pkgs.freerdp
-        pkgs.fzf
-        pkgs.gimp
-        pkgs.go
-        pkgs.pandoc
-        pkgs.kubernetes-helm
-        pkgs.ranger
-        # TODO: fix glfw error
-        pkgs.imhex
-        pkgs.hyprshot
-        pkgs.jq
-        pkgs.lazygit
-        pkgs.mako
-        # pkgs.musescore
-        pkgs.nodejs
-        # TODO: Apply this non-NixOS fix
-        # https://github.com/ch1bo/dotfiles/blob/c17d07e783f71988b9be27185f94b75667c8b9f6/hosts/matterhorn/default.nix#L10
-        pkgs.obs-studio
-        pkgs.pavucontrol
-        pkgs.pulsemixer
-        pkgs.inkscape
-        pkgs.rdesktop
-        pkgs.rofi-wayland
-        pkgs.rsync
-        pkgs.step-cli
-        pkgs.telegram-desktop
-        pkgs.tldr
-        pkgs.tokei
-        pkgs.ueberzugpp
-        pkgs.unzip
-        pkgs.zip
-        pkgs.transmission
-        pkgs.udisks
-        pkgs.e2fsprogs
-        pkgs.dosfstools
-        (pkgs.python3.withPackages (python-pkgs: [
-            python-pkgs.jinja2
-            python-pkgs.regex
-            python-pkgs.requests
-            python-pkgs.bcrypt
-        ]))
-        (pkgs.iosevka-bin.override {
-            variant = "SGr-IosevkaTerm";
-        })
-        pkgs.iosevka
-        pkgs.kubectl
-        pkgs.yarn
-        pkgs.zoxide
-        pkgs.krew
-        pkgs.fuse-overlayfs
-        pkgs.slirp4netns
-        pkgs.runc
-        pkgs.playerctl
-        pkgs.xkb-switch
-        pkgs.semgrep
-        pkgs.terminus_font
-        pkgs.maven
-        pkgs.urlencode
-        pkgs.gitleaks
-        pkgs.pre-commit
-        pkgs.popeye
-        pkgs.sd
-        pkgs.hubble
-        pkgs.tcpdump
-        pkgs.tmux
-        pkgs.kubectx
-        pkgs.argocd
-        pkgs.bandwhich
-        pkgs.fluxcd
-        pkgs.nmap
-        pkgs.zap
-        pkgs.wl-clip-persist
-        pkgs.moreutils
-        pkgs.terraform
-        pkgs.grepcidr
-        pkgs.drawio
-        pkgs.postgresql
-        pkgs.cfssl
-        pkgs.yazi
-        pkgs.man-pages
-        pkgs.go
-        pkgs.enumer
+    home.packages =
+    with pkgs;
+    let
+        fonts = [
+            (iosevka-bin.override {
+                variant = "SGr-IosevkaTerm";
+            })
+            iosevka
+        ];
+        development = [
+            enumer
+            go
+            imhex # TODO: fix glfw error
+            maven
+            nodejs
+            yarn
+            (python3.withPackages (python-pkgs: [
+                python-pkgs.jinja2
+                python-pkgs.regex
+                python-pkgs.requests
+                python-pkgs.bcrypt
+            ]))
+        ];
+        security = [
+            cfssl
+            gitleaks
+            pre-commit
+            semgrep
+            step-cli
+            zap
+        ];
+        operations = [
+            ansible
+            ansible-language-server
+            ansible-lint
+            argocd
+            cilium-cli
+            fluxcd
+            hubble
+            krew
+            kubectl
+            kubectx
+            kubernetes-helm
+            k9s
+            lazygit
+            popeye
+            rsync
+            terraform
+            tokei
+            urlencode
+        ];
+        documenting = [
+            drawio
+            gimp
+            inkscape
+            pandoc
+        ];
+        network = [
+            bandwhich
+            grepcidr
+            nmap
+            tcpdump
+        ];
+        database = [
+            postgresql
+        ];
+        media = [
+            hyprshot
+            obs-studio  # TODO: Apply this non-NixOS fix https://github.com/ch1bo/dotfiles/blob/c17d07e783f71988b9be27185f94b75667c8b9f6/hosts/matterhorn/default.nix#L10
+            pavucontrol
+            playerctl
+            pulsemixer
+            ueberzugpp
+            vlc
+        ];
+        qol = [
+            bat
+            du-dust # du + rust
+            fd
+            fzf
+            htop
+            jq
+            man-pages
+            moreutils
+            ranger
+            sd
+            tldr
+            tmux
+            unzip
+            wl-clip-persist
+            yazi
+            zip
+            zoxide
+            ripgrep
+        ];
+        containers = [
+            fuse-overlayfs
+            runc
+            slirp4netns
+        ];
+        fs = [
+            borgbackup
+            dosfstools
+            e2fsprogs
+            udisks
+        ];
+        remote = [
+            freerdp
+            rdesktop
+        ];
+        desktop = [
+            mako
+            rofi-wayland
+            waybar
+        ];
+    in
+    containers
+    ++ database
+    ++ desktop
+    ++ development
+    ++ documenting
+    ++ fonts
+    ++ fs
+    ++ media
+    ++ network
+    ++ operations
+    ++ qol
+    ++ remote
+    ++ security
+    ++ [
+        telegram-desktop
+        transmission
     ];
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
