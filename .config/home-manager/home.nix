@@ -81,6 +81,7 @@
             grepcidr
             nmap
             tcpdump
+            iperf
         ];
         database = [
             postgresql
