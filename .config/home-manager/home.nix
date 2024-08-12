@@ -47,6 +47,7 @@
             pre-commit
             semgrep
             step-cli
+            vault
             zap
         ];
         operations = [
@@ -154,6 +155,7 @@
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
         "terraform"
+        "vault"
     ];
 
     fonts.fontconfig.enable = true;
