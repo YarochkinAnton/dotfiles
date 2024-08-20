@@ -1,11 +1,10 @@
 return {
-    { "marko-cerovac/material.nvim" },
     { "arcticicestudio/nord-vim", name = "nord" },
-    { "neanias/everforest-nvim" },
+    { "EdenEast/nightfox.nvim" },
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "nord",
+            colorscheme = "nordfox",
         },
     },
 }
