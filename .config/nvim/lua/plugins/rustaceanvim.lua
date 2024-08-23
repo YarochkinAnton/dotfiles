@@ -1,27 +1,8 @@
 return {
     "mrcjkb/rustaceanvim",
-    version = "^4", -- Recommended
     ft = { "rust" },
     opts = {
         server = {
-            on_attach = function(client, bufnr)
-                -- register which-key mappings
-                local wk = require("which-key")
-                wk.register({
-                    ["<leader>cR"] = {
-                        function()
-                            vim.cmd.RustLsp("codeAction")
-                        end,
-                        "Code Action",
-                    },
-                    ["<leader>dr"] = {
-                        function()
-                            vim.cmd.RustLsp("debuggables")
-                        end,
-                        "Rust debuggables",
-                    },
-                }, { mode = "n", buffer = bufnr })
-            end,
             default_settings = {
                 -- rust-analyzer language server configuration
                 ["rust-analyzer"] = {
@@ -31,11 +12,11 @@ return {
                         runBuildScripts = true,
                     },
                     -- Add clippy lints for Rust.
-                    checkOnSave = {
-                        allFeatures = true,
-                        command = "clippy",
-                        extraArgs = { "--no-deps" },
-                    },
+                    -- checkOnSave = {
+                    --     AllFeatures = true,
+                    --     command = "clippy",
+                    --     extraArgs = { "--no-deps" },
+                    -- },
                     procMacro = {
                         enable = true,
                         ignored = {
@@ -72,7 +53,7 @@ return {
                                     description = "Put the expression into an `Arc`",
                                     scope = "expr",
                                 },
-                                box = {
+                                pinbox = {
                                     postfix = "box",
                                     body = "box::new(${receiver})",
                                     description = "Put the expression into an `Arc`",
@@ -117,8 +98,4 @@ return {
             },
         },
     },
-    config = function(_, opts)
-        vim.g.rustaceanvim = vim.tbl_deep_extend("force", {}, opts or {})
-        vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#4c566a" })
-    end,
 }
