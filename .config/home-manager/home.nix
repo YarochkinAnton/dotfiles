@@ -166,11 +166,10 @@
         systemd.enable = true;
     };
     programs.neovim = {
-        enable = true;
+        enable = false;
         defaultEditor = true;
         viAlias = true;
         vimAlias = true;
-        package = pkgs.neovim;
     };
 
     programs.ripgrep = {
@@ -216,6 +215,7 @@
     };
 
     home.shellAliases = {
+        vim = "nvim";
         cd = "z";
         sctl = "systemctl";
         sctlu = "systemctl --user";

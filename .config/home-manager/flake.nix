@@ -8,16 +8,12 @@
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     };
 
     outputs = { nixpkgs, home-manager, ... }@inputs:
         let
             system = "x86_64-linux";
             pkgs = nixpkgs.legacyPackages.${system};
-            overlays = [
-                inputs.neovim-nightly-overlay.overlays.default
-            ];
         in {
             homeConfigurations."poplav" = inputs.home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
@@ -26,7 +22,6 @@
                 # the path to your home.nix.
                 modules = [
                     ./home.nix
-                    {  nixpkgs.overlays = overlays;  }
                 ];
 
                 # Optionally use extraSpecialArgs
