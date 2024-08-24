@@ -1,10 +1,10 @@
 font=Iosevka Term 12
-background-color=#2e3440
-text-color=#ffffff
+background-color=#1e1e2e
+text-color=#cdd6f4
 height=110
 width=300
 border-size=3
-border-color=#88c0d0
+border-color=#89b4fa
 border-radius=2
 icons=1
 sort=-time
@@ -16,7 +16,7 @@ output=HDMI-A-1
 on-button-middle=exec makoctl menu -n "$id" dmenu -p 'Select action: '
 
 [urgency=low]
-border-color=#d8dee9
+border-color=#f5e0dc
 
 [urgency=critical]
-border-color=#bf616a
+border-color=#f38ba8

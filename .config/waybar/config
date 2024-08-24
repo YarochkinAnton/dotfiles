@@ -80,14 +80,14 @@
         "interval": 1,
         "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
         "format-icons": [
-            "<span color='#a3be8c'>▁</span>", // nord14
-            "<span color='#a3be8c'>▂</span>", // nord14
-            "<span color='#ebcb8b'>▃</span>", // nord13
-            "<span color='#ebcb8b'>▄</span>", // nord13
-            "<span color='#d08770'>▅</span>", // nord12
-            "<span color='#d08770'>▆</span>", // nord12
-            "<span color='#bf616a'>▇</span>", // nord11
-            "<span color='#bf616a'>█</span>" // nord11
+            "<span color='#a6e3a1'>▁</span>",
+            "<span color='#a6e3a1'>▂</span>",
+            "<span color='#f9e2af'>▃</span>",
+            "<span color='#f9e2af'>▄</span>",
+            "<span color='#fab387'>▅</span>",
+            "<span color='#fab387'>▆</span>",
+            "<span color='#f38ba8'>▇</span>",
+            "<span color='#f38ba8'>█</span>"
         ],
         "on-click": "alacritty --class htop --command htop --sort-key=PERCENT_CPU"
     },

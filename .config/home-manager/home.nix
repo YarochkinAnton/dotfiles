@@ -193,7 +193,7 @@
                 "kube-ps1"
             ];
             custom = "$HOME/.config/.oh-my-zsh/custom";
-            theme = "nord";
+            theme = "catppuccin-mocha";
         };
         envExtra = ''
             DOTFILES=$HOME/.dotfiles

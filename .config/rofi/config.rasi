@@ -1,8 +1,8 @@
-@theme "nord"
+@theme "catppuccin-mocha"
 
 configuration {
     modes: "drun,run";
-    font: "Iosevka Term 14";
+    font: "Iosevka Term 16";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/

@@ -1,5 +1,8 @@
-# import = ["~/.config/alacritty/everforest.toml"]
-import = ["~/.config/alacritty/nord.toml"]
+# import = ["~/.config/alacritty/nord.toml"]
+import = [
+    # "~/.config/alacritty/nord.toml"
+    "~/.config/alacritty/catppuccin-mocha.toml",
+]
 
 [env]
 TERM = "xterm-256color"
@@ -12,7 +15,7 @@ x = 4
 y = 0
 
 [font]
-size = 12
+size = 14
 
 [font.bold]
 family = "Iosevka Term"
