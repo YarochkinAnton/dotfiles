@@ -4,8 +4,11 @@ return {
         opts = {
             linters = {
                 markdownlint = {
-                    args = { "--disable", "MD013", "--" },
+                    args = { "--config", "~/.config/markdownlint.json", "--" },
                 },
+            },
+            linters_by_ft = {
+                markdown = { "markdownlint" },
             },
         },
     },
