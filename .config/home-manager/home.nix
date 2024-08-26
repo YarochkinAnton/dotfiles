@@ -231,7 +231,7 @@
     home.file = {};
 
     home.sessionVariables = {
-      # EDITOR = "emacs";
+      EDITOR = "vim";
       # LC_ALL = "ru_RU.UTF-8";
     };
 
