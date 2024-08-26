@@ -26,6 +26,7 @@
                 variant = "SGr-IosevkaTerm";
             })
             iosevka
+            noto-fonts-color-emoji
         ];
         development = [
             enumer
