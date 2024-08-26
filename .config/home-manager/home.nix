@@ -27,6 +27,7 @@
             })
             iosevka
             noto-fonts-color-emoji
+            fira-code-nerdfont
         ];
         development = [
             enumer
