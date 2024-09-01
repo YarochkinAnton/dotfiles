@@ -77,6 +77,7 @@
             gimp
             inkscape
             pandoc
+            zk
         ];
         network = [
             bandwhich
