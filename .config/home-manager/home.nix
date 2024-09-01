@@ -234,7 +234,7 @@
     home.file = {};
 
     home.sessionVariables = {
-      EDITOR = "vim";
+      EDITOR = "nvim";
       # LC_ALL = "ru_RU.UTF-8";
     };
 
