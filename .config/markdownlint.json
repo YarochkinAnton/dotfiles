@@ -3,5 +3,8 @@
         "code_blocks": false,
         "line_length": 100,
         "headings": false
+    },
+    "MD012": {
+        "maximum": 2
     }
 }
