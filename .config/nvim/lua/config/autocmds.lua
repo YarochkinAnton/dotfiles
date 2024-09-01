@@ -15,3 +15,11 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
         vim.b.autoformat = false
     end,
 })
+
+-- Add column ruler for markdown files
+vim.api.nvim_create_autocmd({ "FileType" }, {
+    pattern = { "markdown" },
+    callback = function()
+        vim.opt.colorcolumn = "100"
+    end,
+})
