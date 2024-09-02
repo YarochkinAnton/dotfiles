@@ -21,5 +21,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     pattern = { "markdown" },
     callback = function()
         vim.opt.colorcolumn = "100"
+        vim.opt.textwidth = 100
     end,
 })
