@@ -5,5 +5,6 @@ vim.filetype.add({
         [".*/mako/config"] = "dosini",
         [".*/hypr/.*%.conf"] = "hyprlang",
         [".*.gitlab-ci.yml"] = "yaml.gitlab",
+        [".markdownlintrc"] = "json",
     },
 })
