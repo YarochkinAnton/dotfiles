@@ -58,6 +58,18 @@ return {
                 "RenderMarkdownH6",
             },
         },
+        link = {
+            enabled = false,
+        },
+        code = {
+            enabled = false,
+            sign = false,
+        },
+        win_options = {
+            conceallevel = {
+                rendered = 1,
+            },
+        },
     },
     dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
     -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
