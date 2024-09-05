@@ -30,6 +30,7 @@
             nerdfonts
         ];
         development = [
+            difftastic
             enumer
             go
             imhex # TODO: fix glfw error
