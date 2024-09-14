@@ -23,7 +23,7 @@
         "memory",
         "keyboard-state",
         "hyprland/language",
-        "clock"
+        "custom/clock"
     ],
     // Modules configuration
     "hyprland/window": {
@@ -65,16 +65,10 @@
         "icon-size": 21,
         "spacing": 10
     },
-    "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}",
-        "format": "{:%H:%M:%S}",
+    "custom/clock": {
+        "format": "{}",
         "interval": 1,
-        "actions": {
-            "on-click-right": "mode",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        }
+        "exec": "date +'%H:%M:%S'"
     },
     "cpu": {
         "interval": 1,
