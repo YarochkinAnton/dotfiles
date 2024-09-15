@@ -203,6 +203,7 @@
             DOTFILES=$HOME/.dotfiles
             PATH=$HOME/.nix-profile/bin:$PATH
             PATH=$HOME/.krew/bin:$PATH
+            PATH=$HOME/.cargo/bin:$PATH
             GOPATH=$HOME/documents/code/go
         '';
         initExtra = ''
