@@ -39,7 +39,7 @@ vim.keymap.set("n", "<leader>fdg", function()
 end, { desc = "Grep Dotfiles" })
 
 -- Stops neovim from overwriting paste register after pasting over selected text
-vim.keymap.set("v", "p", '"_dP')
+vim.keymap.set("v", "p", '"_dp')
 
 -- Cyrillic mapings
 vim.keymap.set("c", "ц", "w")
