@@ -36,6 +36,7 @@
             imhex # TODO: fix glfw error
             maven
             nodejs
+            nodePackages.prettier
             yarn
             (python3.withPackages (python-pkgs: [
                 python-pkgs.jinja2
