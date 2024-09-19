@@ -232,6 +232,8 @@
         "так-стоп-нахуй" = "shutdown now";
         notes = "cd $HOME/documents/mind-vault && vim $HOME/documents/mind-vault/Home.md && cd -";
         pkgs = "vim $DOTFILES/.config/home-manager/home.nix";
+        ktx = "kubectx";
+        kns = "kubens";
     };
 
     home.file = {};
