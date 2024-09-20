@@ -234,6 +234,8 @@
         pkgs = "vim $DOTFILES/.config/home-manager/home.nix";
         ktx = "kubectx";
         kns = "kubens";
+        cb = "cargo build";
+        cbr = "cargo build --release";
     };
 
     home.file = {};
