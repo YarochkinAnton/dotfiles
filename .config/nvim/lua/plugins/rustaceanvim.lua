@@ -1,6 +1,9 @@
 return {
     "mrcjkb/rustaceanvim",
     ft = { "rust" },
+    keys = {
+        { "<Leader>cd", "<cmd>RustLsp openDocs<cr>", desc = "Open docs.rs reference" },
+    },
     opts = {
         server = {
             default_settings = {
