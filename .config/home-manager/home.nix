@@ -124,6 +124,7 @@
             fuse-overlayfs
             runc
             slirp4netns
+            dive
         ];
         fs = [
             borgbackup
