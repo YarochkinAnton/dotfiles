@@ -51,6 +51,7 @@
             pre-commit
             semgrep
             step-cli
+            thc-hydra
             vault
             zap
         ];
