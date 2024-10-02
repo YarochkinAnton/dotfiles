@@ -14,6 +14,7 @@ return {
             html = { "prettier" },
             json = { "prettier" },
             jsonc = { "prettier" },
+            markdown = { "markdownlint-cli2" },
         },
     },
 }
