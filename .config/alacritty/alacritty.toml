@@ -34,11 +34,11 @@ family = "Iosevka Term"
 style = "SemiBold Oblique"
 
 [[keyboard.bindings]]
-chars = "\u001B[27;5;9~"
+chars = "\u001B[09;5u"
 key = "Tab"
 mods = "Control"
 
 [[keyboard.bindings]]
-chars = "\u001B[27;6;9~"
+chars = "\u001B[09;5u"
 key = "Tab"
 mods = "Control|Shift"
