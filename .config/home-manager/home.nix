@@ -85,6 +85,7 @@
         network = [
             bandwhich
             grepcidr
+            nekoray
             nmap
             tcpdump
             iperf
