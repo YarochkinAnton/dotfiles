@@ -268,3 +268,7 @@ label:focus {
 #submap {
     color: @pink;
 }
+
+#tray menu {
+    background-color: @base;
+}
