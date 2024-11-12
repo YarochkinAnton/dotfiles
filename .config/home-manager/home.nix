@@ -165,6 +165,7 @@
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
         "terraform"
         "vault"
+        "drawio"
     ];
 
     fonts.fontconfig.enable = true;
