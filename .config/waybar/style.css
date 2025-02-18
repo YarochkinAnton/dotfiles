@@ -1,7 +1,7 @@
 @import "themes/mocha.css";
 
 * {
-    font-family: "Iosevka Term";
+    font-family: "Iosevka Term, FontAwesome";
     font-weight: bold;
     font-size: 14px;
     color: @text;
