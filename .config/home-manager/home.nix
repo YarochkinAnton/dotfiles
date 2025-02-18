@@ -93,7 +93,6 @@
         ];
         media = [
             hyprshot
-            obs-studio  # TODO: Apply this non-NixOS fix https://github.com/ch1bo/dotfiles/blob/c17d07e783f71988b9be27185f94b75667c8b9f6/hosts/matterhorn/default.nix#L10
             pavucontrol
             playerctl
             pulsemixer
