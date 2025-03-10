@@ -52,13 +52,13 @@ button:hover {
 
 #workspaces button:hover {
     /* background: rgba(0, 0, 0, 0.2); */
-    box-shadow: inset 0 -2px @overlay0;
+    box-shadow: inset 0 -2px @fg;
 }
 
 #workspaces button.active {
     background-color: transparent;
     /* color: @nord8; */
-    box-shadow: inset 0 -2px @subtext1;
+    box-shadow: inset 0 2px @fg;
 }
 
 #workspaces button.urgent {
