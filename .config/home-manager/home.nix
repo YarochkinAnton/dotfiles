@@ -155,7 +155,6 @@
     ++ remote
     ++ security
     ++ [
-        telegram-desktop
         transmission
     ];
 
