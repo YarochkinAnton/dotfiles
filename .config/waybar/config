@@ -74,14 +74,14 @@
         "interval": 1,
         "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
         "format-icons": [
-            "<span color='#a6e3a1'>▁</span>",
-            "<span color='#a6e3a1'>▂</span>",
-            "<span color='#f9e2af'>▃</span>",
-            "<span color='#f9e2af'>▄</span>",
-            "<span color='#fab387'>▅</span>",
-            "<span color='#fab387'>▆</span>",
-            "<span color='#f38ba8'>▇</span>",
-            "<span color='#f38ba8'>█</span>"
+            "<span color='#8ec07c'>▁</span>",
+            "<span color='#8ec07c'>▂</span>",
+            "<span color='#b8bb26'>▃</span>",
+            "<span color='#b8bb26'>▄</span>",
+            "<span color='#fabd2f'>▅</span>",
+            "<span color='#fabd2f'>▆</span>",
+            "<span color='#fe8019'>▇</span>",
+            "<span color='#fb4934'>█</span>"
         ],
         "on-click": "alacritty --class htop --command htop --sort-key=PERCENT_CPU"
     },

@@ -1,7 +1,8 @@
 # general.import = ["~/.config/alacritty/nord.toml"]
 general.import = [
     # "~/.config/alacritty/nord.toml"
-    "~/.config/alacritty/catppuccin-mocha.toml",
+    # "~/.config/alacritty/catppuccin-mocha.toml",
+    "~/.config/alacritty/gruvbox.toml",
 ]
 
 [env]

@@ -1,14 +1,14 @@
-@import "themes/mocha.css";
+@import "themes/gruvbox.css";
 
 * {
     font-family: "Iosevka Term, FontAwesome";
     font-weight: bold;
     font-size: 14px;
-    color: @text;
+    color: @fg;
 }
 
 window#waybar {
-    background-color: @base;
+    background-color: @bg;
     transition-property: background-color;
     transition-duration: 0.5s;
 }
@@ -82,7 +82,7 @@ button:hover {
 #scratchpad,
 #mpd {
     padding: 0 4px;
-    color: #ffffff;
+    color: @fg;
 }
 
 #window,
@@ -157,7 +157,7 @@ label:focus {
 #network {
     margin: 6px 0;
     background-color: @green;
-    color: @crust;
+    color: @fg;
     border-radius: 6px;
 }
 
@@ -197,7 +197,7 @@ label:focus {
 }
 
 #tray {
-    background-color: @mantle;
+    background-color: @bg;
     border-radius: 6px;
     margin: 2px;
 }
@@ -266,9 +266,9 @@ label:focus {
 }
 
 #submap {
-    color: @pink;
+    color: @red;
 }
 
 #tray menu {
-    background-color: @base;
+    background-color: @bg;
 }

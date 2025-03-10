@@ -1,4 +1,4 @@
-@theme "catppuccin-mocha"
+@theme "gruvbox"
 
 configuration {
     modes: "drun,run";
