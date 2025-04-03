@@ -137,6 +137,7 @@
         ];
         desktop = [
             mako
+            gammastep
             rofi-wayland
             waybar
         ];
