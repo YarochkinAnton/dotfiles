@@ -32,7 +32,6 @@
             difftastic
             enumer
             go
-            imhex # TODO: fix glfw error
             maven
             nodejs
             nodePackages.prettier
