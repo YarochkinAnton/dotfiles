@@ -33,10 +33,10 @@ for window in clients:
     if window["title"] == "Picture-in-Picture" and window["pinned"]:
         window_address = window["address"]
         batch = []
-        if window["fakeFullscreen"]:
+        if window["fullscreenClient"] == 2:
             batch = [
                 f"dispatch focuswindow address:{window_address}",
-                "dispatch fakefullscreen",
+                "dispatch fullscreenstate 0 0",
                 "dispatch resizeactive exact 22% 24%",
                 "dispatch movewindow r",
             ]
@@ -45,7 +45,7 @@ for window in clients:
                 f"dispatch focuswindow address:{window_address}",
                 "dispatch resizeactive exact 90% 90%",
                 "dispatch centerwindow",
-                "dispatch fakefullscreen",
+                "dispatch fullscreenstate 0 2",
             ]
         command = "hyprctl --batch " + ";".join(batch)
         subprocess.call(command.split(" "))
