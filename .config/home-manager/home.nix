@@ -108,15 +108,16 @@
             man-pages
             moreutils
             ranger
+            ripgrep
             sd
             tldr
             tmux
+            unrar
             unzip
             wl-clip-persist
             yazi
             zip
             zoxide
-            ripgrep
         ];
         containers = [
             fuse-overlayfs
@@ -159,8 +160,9 @@
     ];
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-        "terraform"
         "vault"
+        "unrar"
+        "terraform"
         "drawio"
     ];
 
