@@ -14,9 +14,6 @@ return {
                         loadOutDirsFromCheck = true,
                         runBuildScripts = true,
                     },
-                    diagnostics = {
-                        disabled = { "E0308" },
-                    },
                     -- Add clippy lints for Rust.
                     -- checkOnSave = {
                     --     AllFeatures = true,
