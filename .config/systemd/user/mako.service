@@ -3,8 +3,8 @@ Description=mako notification daemon
 
 [Service]
 Type=simple
-ExecStart=%h/.nix-profile/bin/mako
-ExecReload=%h/.nix-profile/bin/makoctl reload
+ExecStart=/usr/bin/mako
+ExecReload=/usr/bin/makoctl reload
 
 [Install]
 WantedBy=graphical-session.target
