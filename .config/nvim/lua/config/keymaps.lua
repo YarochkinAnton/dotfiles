@@ -35,5 +35,6 @@ vim.keymap.set("n", "<leader>fdg", function()
 end, { desc = "Grep Dotfiles" })
 
 -- Cyrillic mapings
-vim.keymap.set("c", "ц", "w")
-vim.keymap.set("c", "й", "q")
+vim.cmd.cnoreabbrev("цй wq")
+vim.cmd.cnoreabbrev("ц w")
+vim.cmd.cnoreabbrev("й q")
