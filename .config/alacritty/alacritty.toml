@@ -43,3 +43,14 @@ mods = "Control"
 chars = "\u001b[9;6u"
 key = "Tab"
 mods = "Shift | Control"
+
+
+[[keyboard.bindings]]
+chars = "\u001b[72;6u"
+key = "H"
+mods = "Shift | Control"
+
+[[keyboard.bindings]]
+chars = "\u001b[76;6u"
+key = "L"
+mods = "Shift | Control"
