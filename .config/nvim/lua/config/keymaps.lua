@@ -39,6 +39,28 @@ vim.cmd.cnoreabbrev("цй wq")
 vim.cmd.cnoreabbrev("ц w")
 vim.cmd.cnoreabbrev("й q")
 
+-- Easier surrounding
+vim.keymap.set("n", "(w", "viwgza(", { remap = true })
+vim.keymap.set("n", ")w", "viwgza)", { remap = true })
+
+vim.keymap.set("n", "}w", "viwgza{", { remap = true })
+vim.keymap.set("n", "{w", "viwgza}", { remap = true })
+
+vim.keymap.set("n", "]w", "viwgza[", { remap = true })
+vim.keymap.set("n", "[w", "viwgza]", { remap = true })
+
+vim.keymap.set("v", "(", "gza(", { remap = true })
+vim.keymap.set("v", ")", "gza)", { remap = true })
+
+vim.keymap.set("v", "}", "gza{", { remap = true })
+vim.keymap.set("v", "{", "gza}", { remap = true })
+
+vim.keymap.set("v", "]", "gza[", { remap = true })
+vim.keymap.set("v", "[", "gza]", { remap = true })
+
+vim.keymap.set("v", '"', 'gza"', { remap = true })
+vim.keymap.set("v", "'", "gza'", { remap = true })
+
 vim.keymap.set("n", "<C-S-l>", function()
     require("bufferline").move(1)
 end)
