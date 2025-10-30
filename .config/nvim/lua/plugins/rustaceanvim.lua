@@ -15,17 +15,21 @@ return {
                         runBuildScripts = true,
                     },
                     -- Add clippy lints for Rust.
-                    -- checkOnSave = {
-                    --     AllFeatures = true,
-                    --     command = "clippy",
-                    --     extraArgs = { "--no-deps" },
-                    -- },
+                    checkOnSave = {
+                        --     AllFeatures = true,
+                        command = "clippy",
+                        -- extraArgs = { "--no-deps" },
+                    },
+                    diagnostics = {
+                        disabled = {},
+                        enable = true,
+                    },
                     procMacro = {
                         enable = true,
                         ignored = {
-                            ["async-trait"] = { "async_trait" },
+                            -- ["async-trait"] = false,
                             ["napi-derive"] = { "napi" },
-                            ["async-recursion"] = { "async_recursion" },
+                            -- ["async-recursion"] = { "async_recursion" },
                         },
                     },
                     inlayHints = {
@@ -41,6 +45,7 @@ return {
                         },
                     },
                     completion = {
+                        hideDeprecated = true,
                         snippets = {
                             custom = {
                                 mutex = {
