@@ -1,0 +1,11 @@
+{
+    "Leptos Component": {
+        "prefix": "lepcomp",
+        "body": [
+            "#[component]",
+            "fn ${1:name}() -> impl IntoView {",
+            "\tview! {}",
+            "}"
+        ]
+    }
+}
