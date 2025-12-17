@@ -8,7 +8,7 @@ ConditionEnvironment=WAYLAND_DISPLAY
 
 
 [Service]
-ExecStart=%h/.nix-profile/bin/wl-clip-persist --clipboard both
+ExecStart=/usr/bin/wl-clip-persist --clipboard both
 NoNewPrivileges=true
 PrivateTmp=true
 DevicePolicy=strict
